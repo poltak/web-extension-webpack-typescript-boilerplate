@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "Test Ext",
+    "short_name": "testex",
+    "description": "Test ext",
+    "offline_enabled": true,
+    "incognito": "spanning",
+    "background": {
+        "scripts": ["lib/browser-polyfill.js", "background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["lib/browser-polyfill.js", "content_script.js"],
+            "css": [],
+            "run_at": "document_start"
+        }
+    ],
+    "options_ui": {
+        "page": "./options.html#/settings",
+        "open_in_tab": true
+    },
+    "applications": {
+        "gecko": {
+           "id": "test@test-ext.org"
+        }
+     },
+    "permissions": [
+        "<all_urls>",
+        "contextMenus",
+        "history",
+        "tabs",
+        "webNavigation",
+        "notifications",
+        "unlimitedStorage",
+        "storage"
+    ],
+    "web_accessible_resources": [
+        "/img/*",
+        "/fonts/*",
+        "/content_script.css"
+    ]
+}

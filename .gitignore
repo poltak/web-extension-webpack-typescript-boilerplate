@@ -1,0 +1,13 @@
+node_modules
+extension
+dist
+.chrome-extension-key.pem
+jest_0/
+*.sublime-workspace
+*.swp
+yarn-error.log
+coverage/
+publish.sh
+stats.json
+.sentryclirc
+.DS_Store

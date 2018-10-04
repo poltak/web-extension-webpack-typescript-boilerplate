@@ -93,7 +93,7 @@ module.exports = function({
     if (notifsEnabled) {
         plugins.push(
             new BuildNotifPlugin({
-                title: 'Memex Build',
+                title: 'WebExt Build',
             }),
         )
     }

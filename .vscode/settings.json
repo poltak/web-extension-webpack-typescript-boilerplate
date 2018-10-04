@@ -1,7 +1,8 @@
 {
     "search.exclude": {
         "**/node_modules": true,
-        "**/extension": true
+        "**/extension": true,
+        "package-lock.json": true
     },
     "stylelint.enable": true,
     "tslint.enable": true,
